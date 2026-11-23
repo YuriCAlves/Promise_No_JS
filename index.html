@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Pedido — Promise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Consulta de Pedido</h1>
+    <p class="subtitulo">Simulação de consulta assíncrona usando <code>Promise</code> e <code>setTimeout()</code>.</p>
+
+    <form id="form-consulta">
+      <label for="numero-pedido">Número do pedido</label>
+      <div class="linha">
+        <input type="number" id="numero-pedido" placeholder="Ex.: 101" min="1" required>
+        <button type="submit" id="btn-consultar">Consultar</button>
+      </div>
+      <small>Pedidos cadastrados para teste: 101, 102, 103 e 104.</small>
+    </form>
+
+    <section id="status" class="status oculto" aria-live="polite"></section>
+    <section id="resultado" class="resultado oculto"></section>
+
+    <!-- Prova de que a página não fica bloqueada durante a espera -->
+    <aside class="teste-bloqueio">
+      <p>Enquanto a consulta acontece, a página continua respondendo:</p>
+      <button type="button" id="btn-contador">Cliquei <span id="contador">0</span> vez(es)</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
